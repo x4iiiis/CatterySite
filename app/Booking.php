@@ -6,5 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Booking extends Model
 {
-    //
+    protected $fillable = [
+        'inDateTime', 'outDateTime', 'petName', 'petSpecies', 'specialInstructions', 'userID',
+    ];
 }
