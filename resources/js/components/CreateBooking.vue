@@ -18,7 +18,7 @@
                 <input type="text" name="petspecies" v-model="petSpecies">
             </div>
             <div class="col-md-12 my-2">
-                specialInsructions:<br>
+                specialInstructions:<br>
                 <input type="text" name="specialinstructions" v-model="specialInstructions">
             </div>
             
@@ -38,18 +38,26 @@
 
         data() {
             return {
-                inDateTime: '',
-                outDateTime: '',
+                inDateTime: '2019/02/06 19:30:13',
+                outDateTime: '2019/02/08 19:30:13',
                 petName: '',
                 petSpecies: '',
-                userID: ''
+                specialInstructions: '',
+                userID: 1
             }
         },
         
         methods:{
             FormSubmit() {
                 axios
-                  .post('http://localhost:8000/api/booking', {inDateTime: this.inDateTime, outDateTime: this.outDateTime, petName: this.PetName, petSpecies: this.petSpecies, specialInsructions: this.specialInstructions, userID: this.userID})
+                  .post('http://localhost:8000/api/booking', {
+                        inDateTime: this.inDateTime,
+                        outDateTime: this.outDateTime,
+                        petName: this.petName,
+                        petSpecies: this.petSpecies,
+                        specialInstructions: this.specialInstructions,
+                        userID: this.userID
+                    })
                   .then(response =>  {
                         console.log(response.data)
                     }) 

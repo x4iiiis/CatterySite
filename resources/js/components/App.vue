@@ -6,7 +6,7 @@
                     <div class="card-header">Root Application</div>
 
                     <div class="card-body">
-                       I really need to wash ma baws
+                       Make an appointment below
 
                        <Create-Booking />
                     </div>

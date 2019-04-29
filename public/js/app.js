@@ -1836,11 +1836,12 @@ __webpack_require__.r(__webpack_exports__);
   },
   data: function data() {
     return {
-      inDateTime: '',
-      outDateTime: '',
+      inDateTime: '2019/02/06 19:30:13',
+      outDateTime: '2019/02/08 19:30:13',
       petName: '',
       petSpecies: '',
-      userID: ''
+      specialInstructions: '',
+      userID: 1
     };
   },
   methods: {
@@ -1848,9 +1849,9 @@ __webpack_require__.r(__webpack_exports__);
       axios.post('http://localhost:8000/api/booking', {
         inDateTime: this.inDateTime,
         outDateTime: this.outDateTime,
-        petName: this.PetName,
+        petName: this.petName,
         petSpecies: this.petSpecies,
-        specialInsructions: this.specialInstructions,
+        specialInstructions: this.specialInstructions,
         userID: this.userID
       }).then(function (response) {
         console.log(response.data);
@@ -37196,7 +37197,7 @@ var render = function() {
             { staticClass: "card-body" },
             [
               _vm._v(
-                "\n                    I really need to wash ma baws\n\n                    "
+                "\n                   Make an appointment below\n\n                   "
               ),
               _c("Create-Booking")
             ],
@@ -37244,7 +37245,7 @@ var render = function() {
               expression: "inDateTime"
             }
           ],
-          attrs: { type: "text" },
+          attrs: { type: "text", name: "indatetime" },
           domProps: { value: _vm.inDateTime },
           on: {
             input: function($event) {
@@ -37270,7 +37271,7 @@ var render = function() {
               expression: "outDateTime"
             }
           ],
-          attrs: { type: "text" },
+          attrs: { type: "text", name: "outdatetime" },
           domProps: { value: _vm.outDateTime },
           on: {
             input: function($event) {
@@ -37296,7 +37297,7 @@ var render = function() {
               expression: "petName"
             }
           ],
-          attrs: { type: "text", name: "firstname" },
+          attrs: { type: "text", name: "petname" },
           domProps: { value: _vm.petName },
           on: {
             input: function($event) {
@@ -37322,7 +37323,7 @@ var render = function() {
               expression: "petSpecies"
             }
           ],
-          attrs: { type: "text", name: "lastname" },
+          attrs: { type: "text", name: "petspecies" },
           domProps: { value: _vm.petSpecies },
           on: {
             input: function($event) {
@@ -37336,7 +37337,7 @@ var render = function() {
       ]),
       _vm._v(" "),
       _c("div", { staticClass: "col-md-12 my-2" }, [
-        _vm._v("\n            specialInsructions:"),
+        _vm._v("\n            specialInstructions:"),
         _c("br"),
         _vm._v(" "),
         _c("input", {
@@ -37348,7 +37349,7 @@ var render = function() {
               expression: "specialInstructions"
             }
           ],
-          attrs: { type: "text", name: "lastname" },
+          attrs: { type: "text", name: "specialinstructions" },
           domProps: { value: _vm.specialInstructions },
           on: {
             input: function($event) {
@@ -49739,15 +49740,14 @@ __webpack_require__.r(__webpack_exports__);
 /*!***************************************************!*\
   !*** ./resources/js/components/CreateBooking.vue ***!
   \***************************************************/
-/*! no static exports found */
+/*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _CreateBooking_vue_vue_type_template_id_31ee20e2___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./CreateBooking.vue?vue&type=template&id=31ee20e2& */ "./resources/js/components/CreateBooking.vue?vue&type=template&id=31ee20e2&");
 /* harmony import */ var _CreateBooking_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./CreateBooking.vue?vue&type=script&lang=js& */ "./resources/js/components/CreateBooking.vue?vue&type=script&lang=js&");
-/* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _CreateBooking_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__) if(__WEBPACK_IMPORT_KEY__ !== 'default') (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _CreateBooking_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__[key]; }) }(__WEBPACK_IMPORT_KEY__));
-/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
 
 
 
@@ -49777,7 +49777,7 @@ component.options.__file = "resources/js/components/CreateBooking.vue"
 /*!****************************************************************************!*\
   !*** ./resources/js/components/CreateBooking.vue?vue&type=script&lang=js& ***!
   \****************************************************************************/
-/*! no static exports found */
+/*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
