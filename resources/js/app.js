@@ -23,6 +23,8 @@ window.Vue = require('vue');
 Vue.component('example-component', require('./components/ExampleComponent.vue').default);
 Vue.component('RootApplication', require('./components/App.vue').default);
 Vue.component('CreateBooking', require('./components/CreateBooking.vue').default);
+Vue.component('LoginComponent', require('./components/LoginComponent.vue').default);
+
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to

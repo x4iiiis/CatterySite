@@ -9,6 +9,7 @@
                        Make an appointment below
 
                        <Create-Booking />
+                       <Login-Component />
                     </div>
                 </div>
             </div>
