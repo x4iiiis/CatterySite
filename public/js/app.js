@@ -37545,7 +37545,7 @@ var render = function() {
               expression: "password"
             }
           ],
-          attrs: { type: "text", name: "password" },
+          attrs: { type: "password", name: "password" },
           domProps: { value: _vm.password },
           on: {
             input: function($event) {

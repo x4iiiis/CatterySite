@@ -7,7 +7,7 @@
             </div>
             <div class="col-md-12 my-2">
                 password:<br>
-                    <input type="text" name="password" v-model="password">
+                    <input type="password" name="password" v-model="password">
             </div>
             
 
