@@ -1941,7 +1941,14 @@ __webpack_require__.r(__webpack_exports__);
         email: this.email,
         password: this.password
       }).then(function (response) {
-        console.log(response.data);
+        console.log("Token:");
+        console.log(response.data.access_token);
+        axios.post('http://localhost:8000/api/auth/me', {
+          token: response.data.access_token
+        }).then(function (response) {
+          console.log("User ID:");
+          console.log(response.data.id);
+        });
       });
     }
   }

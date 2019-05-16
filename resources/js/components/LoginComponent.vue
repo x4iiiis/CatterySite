@@ -39,7 +39,16 @@
                         password: this.password
                     })
                   .then(response =>  {
-                        console.log(response.data)
+                        console.log("Token:")
+                        console.log(response.data.access_token)
+                        axios
+                            .post('http://localhost:8000/api/auth/me', {
+                                token: response.data.access_token
+                            })
+                            .then(response => {
+                                console.log("User ID:")
+                                console.log(response.data.id)
+                            })
                     }) 
             }
         }
