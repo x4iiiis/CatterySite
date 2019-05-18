@@ -42,8 +42,13 @@
                 outDateTime: '2019/02/08 19:30:13',
                 petName: '',
                 petSpecies: '',
-                specialInstructions: '',
-                userID: 1
+                specialInstructions: ''
+            }
+        },
+
+        props: {
+            id: {
+                type: [ Number ],
             }
         },
         
@@ -56,7 +61,7 @@
                         petName: this.petName,
                         petSpecies: this.petSpecies,
                         specialInstructions: this.specialInstructions,
-                        userID: this.userID
+                        userID: this.id
                     })
                   .then(response =>  {
                         console.log(response.data)

@@ -6,10 +6,14 @@
                     <div class="card-header">Root Application</div>
 
                     <div class="card-body">
-                       Make an appointment below
 
-                       <Create-Booking />
+                        Login Below
                        <Login-Component />
+
+                        <br></br>
+                        
+                        Make an appointment below
+                       <Create-Booking :id="this.id" />
                     </div>
                 </div>
             </div>
@@ -21,6 +25,12 @@
     export default {
         mounted() {
             console.log('Application mounted.')
+        },
+
+        data() {
+            return {
+                id: 0,
+            };
         }
     }
 </script>
