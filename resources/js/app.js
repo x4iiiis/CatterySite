@@ -1,3 +1,5 @@
+//R// Not sure this is in the right place / file but hwfg
+import store from './vuex/store';
 
 /**
  * First we will load all of this project's JavaScript dependencies which
@@ -33,5 +35,7 @@ Vue.component('LoginComponent', require('./components/LoginComponent.vue').defau
  */
 
 const app = new Vue({
-    el: '#app'
+    el: '#app',
+
+    store,
 });
