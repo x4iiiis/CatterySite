@@ -23,14 +23,15 @@
 
 <script>
     export default {
-        mounted() {
-            console.log('Application mounted.')
-        },
+    mounted() {
+    console.log('Application mounted.'),
+    console.log('this.$store.state.userStore.user.id = ' + this.$store.state.userStore.user.id)
+    },
 
-        data() {
-            return {
-                id: 0,
-            };
-        }
+    data() {
+    return {
+    id: 0,
+    };
+    }
     }
 </script>

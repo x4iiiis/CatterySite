@@ -1788,7 +1788,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 /* harmony default export */ __webpack_exports__["default"] = ({
   mounted: function mounted() {
-    console.log('Application mounted.');
+    console.log('Application mounted.'), console.log('this.$store.state.userStore.user.id = ' + this.$store.state.userStore.user.id);
   },
   data: function data() {
     return {
@@ -51156,6 +51156,40 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./resources/js/components/userStore.js":
+/*!**********************************************!*\
+  !*** ./resources/js/components/userStore.js ***!
+  \**********************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+var state = {
+  user: {
+    id: 9000,
+    name: ''
+  }
+};
+var getters = {};
+var actions = {};
+var mutations = {
+  GET_USER: function GET_USER(state, user) {
+    state.user = user;
+  },
+  UPDATE_USER: function UPDATE_USER(state, user) {
+    state.user.push(user);
+  }
+};
+/* harmony default export */ __webpack_exports__["default"] = ({
+  state: state,
+  getters: getters,
+  actions: actions,
+  mutations: mutations
+});
+
+/***/ }),
+
 /***/ "./resources/js/vuex/store.js":
 /*!************************************!*\
   !*** ./resources/js/vuex/store.js ***!
@@ -51168,13 +51202,17 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.common.js");
 /* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(vue__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var vuex__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! vuex */ "./node_modules/vuex/dist/vuex.esm.js");
+/* harmony import */ var _components_userStore__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./../components/userStore */ "./resources/js/components/userStore.js");
+
 
 
 vue__WEBPACK_IMPORTED_MODULE_0___default.a.use(vuex__WEBPACK_IMPORTED_MODULE_1__["default"]);
 vue__WEBPACK_IMPORTED_MODULE_0___default.a.config.debug = true;
 var debug = "development" !== 'production';
 /* harmony default export */ __webpack_exports__["default"] = (new vuex__WEBPACK_IMPORTED_MODULE_1__["default"].Store({
-  modules: {},
+  modules: {
+    userStore: _components_userStore__WEBPACK_IMPORTED_MODULE_2__["default"]
+  },
   strict: debug
 }));
 
