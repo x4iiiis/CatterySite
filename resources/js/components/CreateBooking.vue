@@ -33,7 +33,9 @@
 <script>
     export default {
         mounted() {
-            console.log('Application mounted.')
+            console.log('Application mounted.'),
+            console.log('Greetings from the CreateBooking Vue'),
+            console.log(this.$store.state.userStore.user.id)
         },
 
         data() {
@@ -61,7 +63,7 @@
                         petName: this.petName,
                         petSpecies: this.petSpecies,
                         specialInstructions: this.specialInstructions,
-                        userID: this.id
+                        userID: this.$store.state.userStore.user.id
                     })
                   .then(response =>  {
                         console.log(response.data)

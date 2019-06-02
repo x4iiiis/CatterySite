@@ -1842,7 +1842,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 /* harmony default export */ __webpack_exports__["default"] = ({
   mounted: function mounted() {
-    console.log('Application mounted.');
+    console.log('Application mounted.'), console.log('Greetings from the CreateBooking Vue'), console.log(this.$store.state.userStore.user.id);
   },
   data: function data() {
     return {
@@ -1866,7 +1866,7 @@ __webpack_require__.r(__webpack_exports__);
         petName: this.petName,
         petSpecies: this.petSpecies,
         specialInstructions: this.specialInstructions,
-        userID: this.id
+        userID: this.$store.state.userStore.user.id
       }).then(function (response) {
         console.log(response.data);
       });
