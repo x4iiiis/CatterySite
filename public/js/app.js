@@ -1788,12 +1788,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 /* harmony default export */ __webpack_exports__["default"] = ({
   mounted: function mounted() {
-    console.log('Application mounted.'), console.log('this.$store.state.userStore.user.id = ' + this.$store.state.userStore.user.id);
-  },
-  data: function data() {
-    return {
-      id: 0
-    };
+    console.log('App.vue mounted.'), console.log('this.$store.state.userStore.user.id = ' + this.$store.state.userStore.user.id);
   }
 });
 
@@ -1842,7 +1837,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 /* harmony default export */ __webpack_exports__["default"] = ({
   mounted: function mounted() {
-    console.log('Application mounted.'), console.log('Greetings from the CreateBooking Vue'), console.log(this.$store.state.userStore.user.id);
+    console.log('CreateBooking.vue mounted.');
   },
   data: function data() {
     return {
@@ -1852,11 +1847,6 @@ __webpack_require__.r(__webpack_exports__);
       petSpecies: '',
       specialInstructions: ''
     };
-  },
-  props: {
-    id: {
-      type: [Number]
-    }
   },
   methods: {
     FormSubmit: function FormSubmit() {
@@ -1940,7 +1930,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 /* harmony default export */ __webpack_exports__["default"] = ({
   mounted: function mounted() {
-    console.log('Login component mounted.');
+    console.log('LoginComponent.vue mounted.');
   },
   data: function data() {
     return {
@@ -37280,7 +37270,7 @@ var render = function() {
               _vm._v(
                 "\n                    \n                    Make an appointment below\n                   "
               ),
-              _c("Create-Booking", { attrs: { id: this.id } })
+              _c("Create-Booking")
             ],
             1
           )

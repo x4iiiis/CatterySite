@@ -21,7 +21,7 @@
 <script>
     export default {
         mounted() {
-            console.log('Login component mounted.')
+            console.log('LoginComponent.vue mounted.')
         },
         
         data() {

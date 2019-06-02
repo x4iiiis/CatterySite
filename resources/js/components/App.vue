@@ -13,7 +13,7 @@
                         <br></br>
                         
                         Make an appointment below
-                       <Create-Booking :id="this.id" />
+                       <Create-Booking />
                     </div>
                 </div>
             </div>
@@ -24,14 +24,8 @@
 <script>
     export default {
         mounted() {
-            console.log('Application mounted.'),
+            console.log('App.vue mounted.'),
             console.log('this.$store.state.userStore.user.id = ' + this.$store.state.userStore.user.id)
-        },
-
-        data() {
-            return {
-                id: 0,
-            };
         }
     }
 </script>
