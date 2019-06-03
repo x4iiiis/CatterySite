@@ -24,8 +24,7 @@
 <script>
     export default {
         mounted() {
-            console.log('App.vue mounted.'),
-            console.log('this.$store.state.userStore.user.id = ' + this.$store.state.userStore.user.id)
+            console.log('App.vue mounted.')
         }
     }
 </script>

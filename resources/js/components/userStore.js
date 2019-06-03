@@ -1,6 +1,6 @@
 const state = {
     user: {
-        id: 9000,
+        id: 0,
         name: ''
     }
 }
@@ -10,14 +10,9 @@ const getters = {};
 const actions = {};
 
 const mutations = {
-    GET_USER(state, user) {
-        state.user = user;
-    },
-
-    UPDATE_USER(state, user) {
+    updateUser(state, user) {
         state.user.id = user.id;
         state.user.name = user.name;
-        console.log("UPDATING USER");
     }
 }
 

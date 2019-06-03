@@ -34,30 +34,18 @@
         methods:{
             FormSubmit() {
                 axios
-                  .post('http://localhost:8000/api/auth/login', {
-                        email: this.email,
-                        password: this.password
-                    })
+                  .post('http://localhost:8000/api/auth/login', { email: this.email, password: this.password })
                   .then(response =>  {
-                        console.log("Token:")
-                        console.log(response.data.access_token)
                         axios
-                            .post('http://localhost:8000/api/auth/me', {
-                                token: response.data.access_token
-                            })
+                            .post('http://localhost:8000/api/auth/me', { token: response.data.access_token })
                             .then(response => {
-                                console.log("User ID:")
-                                console.log(response.data.id)
-                                console.log("User Name:")
-                                console.log(response.data.name)
-                                console.log(response.data)
-
-                                this.$store.commit('UPDATE_USER', {
-                                    id: response.data.id,
-                                    name: response.data.name
-                                })
+                                this.UpdateStore(response.data.id, response.data.name)
                             })                                
                     }) 
+            },
+
+            UpdateStore(userID, userName) {
+                this.$store.commit('updateUser', { id: userID, name: userName })
             }
         }
     }

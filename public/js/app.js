@@ -1788,7 +1788,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 /* harmony default export */ __webpack_exports__["default"] = ({
   mounted: function mounted() {
-    console.log('App.vue mounted.'), console.log('this.$store.state.userStore.user.id = ' + this.$store.state.userStore.user.id);
+    console.log('App.vue mounted.');
   }
 });
 
@@ -1946,22 +1946,17 @@ __webpack_require__.r(__webpack_exports__);
         email: this.email,
         password: this.password
       }).then(function (response) {
-        console.log("Token:");
-        console.log(response.data.access_token);
         axios.post('http://localhost:8000/api/auth/me', {
           token: response.data.access_token
         }).then(function (response) {
-          console.log("User ID:");
-          console.log(response.data.id);
-          console.log("User Name:");
-          console.log(response.data.name);
-          console.log(response.data);
-
-          _this.$store.commit('UPDATE_USER', {
-            id: response.data.id,
-            name: response.data.name
-          });
+          _this.UpdateStore(response.data.id, response.data.name);
         });
+      });
+    },
+    UpdateStore: function UpdateStore(userID, userName) {
+      this.$store.commit('updateUser', {
+        id: userID,
+        name: userName
       });
     }
   }
@@ -51167,20 +51162,16 @@ __webpack_require__.r(__webpack_exports__);
 __webpack_require__.r(__webpack_exports__);
 var state = {
   user: {
-    id: 9000,
+    id: 0,
     name: ''
   }
 };
 var getters = {};
 var actions = {};
 var mutations = {
-  GET_USER: function GET_USER(state, user) {
-    state.user = user;
-  },
-  UPDATE_USER: function UPDATE_USER(state, user) {
+  updateUser: function updateUser(state, user) {
     state.user.id = user.id;
     state.user.name = user.name;
-    console.log("UPDATING USER");
   }
 };
 /* harmony default export */ __webpack_exports__["default"] = ({
