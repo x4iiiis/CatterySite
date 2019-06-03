@@ -48,7 +48,15 @@
                             .then(response => {
                                 console.log("User ID:")
                                 console.log(response.data.id)
-                            })
+                                console.log("User Name:")
+                                console.log(response.data.name)
+                                console.log(response.data)
+
+                                this.$store.commit('UPDATE_USER', {
+                                    id: response.data.id,
+                                    name: response.data.name
+                                })
+                            })                                
                     }) 
             }
         }

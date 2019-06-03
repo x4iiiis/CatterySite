@@ -15,7 +15,9 @@ const mutations = {
     },
 
     UPDATE_USER(state, user) {
-        state.user.push((user));
+        state.user.id = user.id;
+        state.user.name = user.name;
+        console.log("UPDATING USER");
     }
 }
 

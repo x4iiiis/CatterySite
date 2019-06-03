@@ -1940,6 +1940,8 @@ __webpack_require__.r(__webpack_exports__);
   },
   methods: {
     FormSubmit: function FormSubmit() {
+      var _this = this;
+
       axios.post('http://localhost:8000/api/auth/login', {
         email: this.email,
         password: this.password
@@ -1951,6 +1953,14 @@ __webpack_require__.r(__webpack_exports__);
         }).then(function (response) {
           console.log("User ID:");
           console.log(response.data.id);
+          console.log("User Name:");
+          console.log(response.data.name);
+          console.log(response.data);
+
+          _this.$store.commit('UPDATE_USER', {
+            id: response.data.id,
+            name: response.data.name
+          });
         });
       });
     }
@@ -51168,7 +51178,9 @@ var mutations = {
     state.user = user;
   },
   UPDATE_USER: function UPDATE_USER(state, user) {
-    state.user.push(user);
+    state.user.id = user.id;
+    state.user.name = user.name;
+    console.log("UPDATING USER");
   }
 };
 /* harmony default export */ __webpack_exports__["default"] = ({
