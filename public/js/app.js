@@ -1860,6 +1860,27 @@ __webpack_require__.r(__webpack_exports__);
       }).then(function (response) {
         console.log(response.data);
       });
+    },
+    ValidateInput: function ValidateInput() {
+      // User ID showing as 0 means the user has not logged in 
+      if (this.$store.state.userStore.user.id == 0) {
+        console.log("Nah mate, user ID is 0. You need to log your ass in bruh");
+        return false;
+      } // Invalid Dates - needs more validation 
+
+
+      if (this.inDateTime == '' || this.outDateTime == '') {
+        console.log("Date fields cannot be empty!");
+        return false;
+      } // Invalid Names or Species 
+
+
+      if (this.petName == '' || this.petSpecies == '') {
+        console.log("Blank name and/or species fields");
+        return false;
+      }
+
+      this.FormSubmit();
     }
   }
 });
@@ -37445,7 +37466,7 @@ var render = function() {
             staticClass: "btn btn-success",
             on: {
               click: function($event) {
-                return _vm.FormSubmit()
+                return _vm.ValidateInput()
               }
             }
           },

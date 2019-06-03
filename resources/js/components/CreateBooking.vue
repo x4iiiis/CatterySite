@@ -24,7 +24,7 @@
             
             
             <div class="col-md-12 my-2">
-                <button class="btn btn-success" @click="FormSubmit()">Submit</button>
+                <button class="btn btn-success" @click="ValidateInput()">Submit</button>
             </div>
         </div>
     </div>
@@ -60,6 +60,26 @@
                   .then(response =>  {
                         console.log(response.data)
                     }) 
+            },
+
+            ValidateInput() {
+                // User ID showing as 0 means the user has not logged in 
+                if (this.$store.state.userStore.user.id == 0) {
+                    console.log("Nah mate, user ID is 0. You need to log your ass in bruh")
+                    return false
+                }
+                // Invalid Dates - needs more validation 
+                if (this.inDateTime == '' || this.outDateTime == '') {
+                    console.log("Date fields cannot be empty!")
+                    return false
+                }
+                // Invalid Names or Species 
+                if (this.petName == '' || this.petSpecies == '') {
+                    console.log("Blank name and/or species fields")
+                    return false
+                }
+
+                this.FormSubmit()
             }
         }
     }
