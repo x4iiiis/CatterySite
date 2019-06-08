@@ -78,7 +78,13 @@
                     console.log("Blank name and/or species fields")
                     return false
                 }
+                //Allow blank Special Instructions field - fills the database field with a forward slash
+                if (this.specialInstructions == '') {
+                    this.specialInstructions = '/'
+                }
 
+
+                //If all above validation checks have passed, submit the data
                 this.FormSubmit()
             }
         }
