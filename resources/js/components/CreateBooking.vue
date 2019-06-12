@@ -1,32 +1,42 @@
 <template>
     <div class="container">
-        <div class="row">
-            <div class="col-md-12 my-2">
-                inDateTime:<br>
-                <input type="text" name="indatetime" v-model="inDateTime">
+        <center>
+            <div class="row">
+
+                <div class="col-md my-2">
+                    Pet Name:<br>
+                        <input type="text" name="petname" v-model="petName">
+                </div>
+                <div class="col-md my-2">
+                    Species:<br>
+                        <input type="text" name="petspecies" v-model="petSpecies">
+                </div>
             </div>
-            <div class="col-md-12 my-2">
-                outDateTime:<br>
-                <input type="text" name="outdatetime" v-model="outDateTime">
+            <div class="row">
+                <div class="col-lg my-2">
+                    Special Instructions:<br>
+                        <textarea name="specialinstructions" v-model="specialInstructions" style="width:100%"></textarea>
+                    </div>
             </div>
-            <div class="col-md-12 my-2">
-                petName:<br>
-                <input type="text" name="petname" v-model="petName">
+            <div class="row">
+
+                <div class="col-md my-2">
+                    Dropoff Date & Time:<br>
+                        <input type="text" name="indatetime" v-model="inDateTime">
+                </div>
+                <div class="col-md my-2">
+                    Pickup Date & Time:<br>
+                        <input type="text" name="outdatetime" v-model="outDateTime">
+                </div>
+
             </div>
-            <div class="col-md-12 my-2">
-                petSpecies:<br>
-                <input type="text" name="petspecies" v-model="petSpecies">
+
+            <div class="row">
+                <div class="col-lg my-4">
+                    <button class="btn btn-success" @click="ValidateInput()">Submit</button>
+                </div>
             </div>
-            <div class="col-md-12 my-2">
-                specialInstructions:<br>
-                <input type="text" name="specialinstructions" v-model="specialInstructions">
-            </div>
-            
-            
-            <div class="col-md-12 my-2">
-                <button class="btn btn-success" @click="ValidateInput()">Submit</button>
-            </div>
-        </div>
+        </center>
     </div>
 </template>
 

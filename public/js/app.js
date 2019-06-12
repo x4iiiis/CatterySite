@@ -1842,6 +1842,16 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   mounted: function mounted() {
     console.log('CreateBooking.vue mounted.');
@@ -1942,6 +1952,8 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+//
+//
 //
 //
 //
@@ -37301,9 +37313,8 @@ var render = function() {
             "div",
             { staticClass: "card-body" },
             [
-              _vm._v(
-                "\n\n                    Login Below\n                    "
-              ),
+              _c("center", [_c("h5", [_vm._v("Login below!")])]),
+              _vm._v(" "),
               _c("Login-Component")
             ],
             1
@@ -37311,7 +37322,7 @@ var render = function() {
         ])
       ]),
       _vm._v(" "),
-      _c("div", { staticClass: "col-md-4" }, [
+      _c("div", { staticClass: "col-md-6" }, [
         _c("div", { staticClass: "card" }, [
           _c("div", { staticClass: "card-header" }, [
             _vm._v("Booking Component")
@@ -37321,9 +37332,10 @@ var render = function() {
             "div",
             { staticClass: "card-body" },
             [
-              _vm._v(
-                "\n\n                    Make an appointment below\n                    "
-              ),
+              _c("center", [
+                _c("h5", [_vm._v("Book your pet's holiday below!")])
+              ]),
+              _vm._v(" "),
               _c("Create-Booking")
             ],
             1
@@ -37355,154 +37367,168 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", { staticClass: "container" }, [
-    _c("div", { staticClass: "row" }, [
-      _c("div", { staticClass: "col-md-12 my-2" }, [
-        _vm._v("\n            inDateTime:"),
-        _c("br"),
+  return _c(
+    "div",
+    { staticClass: "container" },
+    [
+      _c("center", [
+        _c("div", { staticClass: "row" }, [
+          _c("div", { staticClass: "col-md my-2" }, [
+            _vm._v("\n                Pet Name:"),
+            _c("br"),
+            _vm._v(" "),
+            _c("input", {
+              directives: [
+                {
+                  name: "model",
+                  rawName: "v-model",
+                  value: _vm.petName,
+                  expression: "petName"
+                }
+              ],
+              attrs: { type: "text", name: "petname" },
+              domProps: { value: _vm.petName },
+              on: {
+                input: function($event) {
+                  if ($event.target.composing) {
+                    return
+                  }
+                  _vm.petName = $event.target.value
+                }
+              }
+            })
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "col-md my-2" }, [
+            _vm._v("\n                Species:"),
+            _c("br"),
+            _vm._v(" "),
+            _c("input", {
+              directives: [
+                {
+                  name: "model",
+                  rawName: "v-model",
+                  value: _vm.petSpecies,
+                  expression: "petSpecies"
+                }
+              ],
+              attrs: { type: "text", name: "petspecies" },
+              domProps: { value: _vm.petSpecies },
+              on: {
+                input: function($event) {
+                  if ($event.target.composing) {
+                    return
+                  }
+                  _vm.petSpecies = $event.target.value
+                }
+              }
+            })
+          ])
+        ]),
         _vm._v(" "),
-        _c("input", {
-          directives: [
-            {
-              name: "model",
-              rawName: "v-model",
-              value: _vm.inDateTime,
-              expression: "inDateTime"
-            }
-          ],
-          attrs: { type: "text", name: "indatetime" },
-          domProps: { value: _vm.inDateTime },
-          on: {
-            input: function($event) {
-              if ($event.target.composing) {
-                return
+        _c("div", { staticClass: "row" }, [
+          _c("div", { staticClass: "col-lg my-2" }, [
+            _vm._v("\n                Special Instructions:"),
+            _c("br"),
+            _vm._v(" "),
+            _c("textarea", {
+              directives: [
+                {
+                  name: "model",
+                  rawName: "v-model",
+                  value: _vm.specialInstructions,
+                  expression: "specialInstructions"
+                }
+              ],
+              staticStyle: { width: "100%" },
+              attrs: { name: "specialinstructions" },
+              domProps: { value: _vm.specialInstructions },
+              on: {
+                input: function($event) {
+                  if ($event.target.composing) {
+                    return
+                  }
+                  _vm.specialInstructions = $event.target.value
+                }
               }
-              _vm.inDateTime = $event.target.value
-            }
-          }
-        })
-      ]),
-      _vm._v(" "),
-      _c("div", { staticClass: "col-md-12 my-2" }, [
-        _vm._v("\n            outDateTime:"),
-        _c("br"),
+            })
+          ])
+        ]),
         _vm._v(" "),
-        _c("input", {
-          directives: [
-            {
-              name: "model",
-              rawName: "v-model",
-              value: _vm.outDateTime,
-              expression: "outDateTime"
-            }
-          ],
-          attrs: { type: "text", name: "outdatetime" },
-          domProps: { value: _vm.outDateTime },
-          on: {
-            input: function($event) {
-              if ($event.target.composing) {
-                return
+        _c("div", { staticClass: "row" }, [
+          _c("div", { staticClass: "col-md my-2" }, [
+            _vm._v("\n                Dropoff Date & Time:"),
+            _c("br"),
+            _vm._v(" "),
+            _c("input", {
+              directives: [
+                {
+                  name: "model",
+                  rawName: "v-model",
+                  value: _vm.inDateTime,
+                  expression: "inDateTime"
+                }
+              ],
+              attrs: { type: "text", name: "indatetime" },
+              domProps: { value: _vm.inDateTime },
+              on: {
+                input: function($event) {
+                  if ($event.target.composing) {
+                    return
+                  }
+                  _vm.inDateTime = $event.target.value
+                }
               }
-              _vm.outDateTime = $event.target.value
-            }
-          }
-        })
-      ]),
-      _vm._v(" "),
-      _c("div", { staticClass: "col-md-12 my-2" }, [
-        _vm._v("\n            petName:"),
-        _c("br"),
+            })
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "col-md my-2" }, [
+            _vm._v("\n                Pickup Date & Time:"),
+            _c("br"),
+            _vm._v(" "),
+            _c("input", {
+              directives: [
+                {
+                  name: "model",
+                  rawName: "v-model",
+                  value: _vm.outDateTime,
+                  expression: "outDateTime"
+                }
+              ],
+              attrs: { type: "text", name: "outdatetime" },
+              domProps: { value: _vm.outDateTime },
+              on: {
+                input: function($event) {
+                  if ($event.target.composing) {
+                    return
+                  }
+                  _vm.outDateTime = $event.target.value
+                }
+              }
+            })
+          ])
+        ]),
         _vm._v(" "),
-        _c("input", {
-          directives: [
-            {
-              name: "model",
-              rawName: "v-model",
-              value: _vm.petName,
-              expression: "petName"
-            }
-          ],
-          attrs: { type: "text", name: "petname" },
-          domProps: { value: _vm.petName },
-          on: {
-            input: function($event) {
-              if ($event.target.composing) {
-                return
-              }
-              _vm.petName = $event.target.value
-            }
-          }
-        })
-      ]),
-      _vm._v(" "),
-      _c("div", { staticClass: "col-md-12 my-2" }, [
-        _vm._v("\n            petSpecies:"),
-        _c("br"),
-        _vm._v(" "),
-        _c("input", {
-          directives: [
-            {
-              name: "model",
-              rawName: "v-model",
-              value: _vm.petSpecies,
-              expression: "petSpecies"
-            }
-          ],
-          attrs: { type: "text", name: "petspecies" },
-          domProps: { value: _vm.petSpecies },
-          on: {
-            input: function($event) {
-              if ($event.target.composing) {
-                return
-              }
-              _vm.petSpecies = $event.target.value
-            }
-          }
-        })
-      ]),
-      _vm._v(" "),
-      _c("div", { staticClass: "col-md-12 my-2" }, [
-        _vm._v("\n            specialInstructions:"),
-        _c("br"),
-        _vm._v(" "),
-        _c("input", {
-          directives: [
-            {
-              name: "model",
-              rawName: "v-model",
-              value: _vm.specialInstructions,
-              expression: "specialInstructions"
-            }
-          ],
-          attrs: { type: "text", name: "specialinstructions" },
-          domProps: { value: _vm.specialInstructions },
-          on: {
-            input: function($event) {
-              if ($event.target.composing) {
-                return
-              }
-              _vm.specialInstructions = $event.target.value
-            }
-          }
-        })
-      ]),
-      _vm._v(" "),
-      _c("div", { staticClass: "col-md-12 my-2" }, [
-        _c(
-          "button",
-          {
-            staticClass: "btn btn-success",
-            on: {
-              click: function($event) {
-                return _vm.ValidateInput()
-              }
-            }
-          },
-          [_vm._v("Submit")]
-        )
+        _c("div", { staticClass: "row" }, [
+          _c("div", { staticClass: "col-lg my-4" }, [
+            _c(
+              "button",
+              {
+                staticClass: "btn btn-success",
+                on: {
+                  click: function($event) {
+                    return _vm.ValidateInput()
+                  }
+                }
+              },
+              [_vm._v("Submit")]
+            )
+          ])
+        ])
       ])
-    ])
-  ])
+    ],
+    1
+  )
 }
 var staticRenderFns = []
 render._withStripped = true
@@ -37573,76 +37599,83 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", { staticClass: "container" }, [
-    _c("div", { staticClass: "row" }, [
-      _c("div", { staticClass: "col-md-12 my-2" }, [
-        _vm._v("\n            email:"),
-        _c("br"),
-        _vm._v(" "),
-        _c("input", {
-          directives: [
-            {
-              name: "model",
-              rawName: "v-model",
-              value: _vm.email,
-              expression: "email"
-            }
-          ],
-          attrs: { type: "text", name: "email" },
-          domProps: { value: _vm.email },
-          on: {
-            input: function($event) {
-              if ($event.target.composing) {
-                return
+  return _c(
+    "div",
+    { staticClass: "container" },
+    [
+      _c("center", [
+        _c("div", { staticClass: "row" }, [
+          _c("div", { staticClass: "col-md-12 my-2" }, [
+            _vm._v("\n                Email:"),
+            _c("br"),
+            _vm._v(" "),
+            _c("input", {
+              directives: [
+                {
+                  name: "model",
+                  rawName: "v-model",
+                  value: _vm.email,
+                  expression: "email"
+                }
+              ],
+              attrs: { type: "text", name: "email" },
+              domProps: { value: _vm.email },
+              on: {
+                input: function($event) {
+                  if ($event.target.composing) {
+                    return
+                  }
+                  _vm.email = $event.target.value
+                }
               }
-              _vm.email = $event.target.value
-            }
-          }
-        })
-      ]),
-      _vm._v(" "),
-      _c("div", { staticClass: "col-md-12 my-2" }, [
-        _vm._v("\n            password:"),
-        _c("br"),
-        _vm._v(" "),
-        _c("input", {
-          directives: [
-            {
-              name: "model",
-              rawName: "v-model",
-              value: _vm.password,
-              expression: "password"
-            }
-          ],
-          attrs: { type: "password", name: "password" },
-          domProps: { value: _vm.password },
-          on: {
-            input: function($event) {
-              if ($event.target.composing) {
-                return
+            })
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "col-md-12 my-2" }, [
+            _vm._v("\n                Password:"),
+            _c("br"),
+            _vm._v(" "),
+            _c("input", {
+              directives: [
+                {
+                  name: "model",
+                  rawName: "v-model",
+                  value: _vm.password,
+                  expression: "password"
+                }
+              ],
+              attrs: { type: "password", name: "password" },
+              domProps: { value: _vm.password },
+              on: {
+                input: function($event) {
+                  if ($event.target.composing) {
+                    return
+                  }
+                  _vm.password = $event.target.value
+                }
               }
-              _vm.password = $event.target.value
-            }
-          }
-        })
-      ]),
-      _vm._v(" "),
-      _c("div", { staticClass: "col-md-12 my-2" }, [
-        _c(
-          "button",
-          {
-            staticClass: "btn btn-success",
-            on: {
-              click: function($event) {
-                return _vm.FormSubmit()
-              }
-            }
-          },
-          [_vm._v("Submit")]
-        )
+            })
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "col-md-12 my-2" }, [
+            _c(
+              "button",
+              {
+                staticClass: "btn btn-success",
+                on: {
+                  click: function($event) {
+                    return _vm.FormSubmit()
+                  }
+                }
+              },
+              [_vm._v("Submit")]
+            )
+          ])
+        ])
       ])
-    ])
-  ])
+    ],
+    1
+  )
 }
 var staticRenderFns = []
 render._withStripped = true

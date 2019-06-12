@@ -1,20 +1,22 @@
 <template>
     <div class="container">
-        <div class="row">
-            <div class="col-md-12 my-2">
-                email:<br>
-                    <input type="text" name="email" v-model="email">
+        <center>
+            <div class="row">
+                <div class="col-md-12 my-2">
+                    Email:<br>
+                        <input type="text" name="email" v-model="email">
             </div>
-            <div class="col-md-12 my-2">
-                password:<br>
-                    <input type="password" name="password" v-model="password">
+                <div class="col-md-12 my-2">
+                    Password:<br>
+                        <input type="password" name="password" v-model="password">
             </div>
-            
 
-            <div class="col-md-12 my-2">
-                <button class="btn btn-success" @click="FormSubmit()">Submit</button>
+
+                <div class="col-md-12 my-2">
+                    <button class="btn btn-success" @click="FormSubmit()">Submit</button>
+                </div>
             </div>
-        </div>
+        </center>
     </div>
 </template>
 

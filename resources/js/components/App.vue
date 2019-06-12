@@ -8,18 +8,18 @@
 
                     <div class="card-body">
 
-                        Login Below
+                        <center><h5>Login below!</h5></center>
                         <Login-Component />
                     </div>
                 </div>
             </div>
-            <div class="col-md-4">
+            <div class="col-md-6">
                 <div class="card">
                     <div class="card-header">Booking Component</div>
 
                     <div class="card-body">
 
-                        Make an appointment below
+                        <center><h5>Book your pet's holiday below!</h5></center>
                         <Create-Booking />
                     </div>
                 </div>
