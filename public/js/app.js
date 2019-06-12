@@ -1786,6 +1786,13 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   mounted: function mounted() {
     console.log('App.vue mounted.');
@@ -1977,6 +1984,8 @@ __webpack_require__.r(__webpack_exports__);
           token: response.data.access_token
         }).then(function (response) {
           _this.UpdateStore(response.data.id, response.data.name);
+
+          console.log('Welcome ' + response.data.name.split(" ")[0] + '!');
         });
       });
     },
@@ -37282,10 +37291,10 @@ var render = function() {
   var _c = _vm._self._c || _h
   return _c("div", { staticClass: "container" }, [
     _c("div", { staticClass: "row justify-content-center" }, [
-      _c("div", { staticClass: "col-md-8" }, [
+      _c("div", { staticClass: "col-md-4" }, [
         _c("div", { staticClass: "card" }, [
           _c("div", { staticClass: "card-header" }, [
-            _vm._v("Root Application")
+            _vm._v("Login Component")
           ]),
           _vm._v(" "),
           _c(
@@ -37293,14 +37302,27 @@ var render = function() {
             { staticClass: "card-body" },
             [
               _vm._v(
-                "\n\n                    Login Below\n                   "
+                "\n\n                    Login Below\n                    "
               ),
-              _c("Login-Component"),
-              _vm._v(" "),
-              _c("br"),
-              _c("br"),
+              _c("Login-Component")
+            ],
+            1
+          )
+        ])
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "col-md-4" }, [
+        _c("div", { staticClass: "card" }, [
+          _c("div", { staticClass: "card-header" }, [
+            _vm._v("Booking Component")
+          ]),
+          _vm._v(" "),
+          _c(
+            "div",
+            { staticClass: "card-body" },
+            [
               _vm._v(
-                "\n                    \n                    Make an appointment below\n                   "
+                "\n\n                    Make an appointment below\n                    "
               ),
               _c("Create-Booking")
             ],

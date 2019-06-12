@@ -40,6 +40,7 @@
                             .post('http://localhost:8000/api/auth/me', { token: response.data.access_token })
                             .then(response => {
                                 this.UpdateStore(response.data.id, response.data.name)
+                                console.log('Welcome ' + response.data.name.split(" ")[0] + '!')
                             })                                
                     }) 
             },

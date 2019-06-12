@@ -1,19 +1,26 @@
 <template>
     <div class="container">
+
         <div class="row justify-content-center">
-            <div class="col-md-8">
+            <div class="col-md-4">
                 <div class="card">
-                    <div class="card-header">Root Application</div>
+                    <div class="card-header">Login Component</div>
 
                     <div class="card-body">
 
                         Login Below
-                       <Login-Component />
+                        <Login-Component />
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-header">Booking Component</div>
 
-                        <br></br>
-                        
+                    <div class="card-body">
+
                         Make an appointment below
-                       <Create-Booking />
+                        <Create-Booking />
                     </div>
                 </div>
             </div>
