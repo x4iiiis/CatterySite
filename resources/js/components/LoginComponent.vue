@@ -1,22 +1,32 @@
 <template>
     <div class="container">
-        <center>
-            <div class="row">
-                <div class="col-md-12 my-2">
-                    Email:<br>
-                        <input type="text" name="email" v-model="email">
-            </div>
-                <div class="col-md-12 my-2">
-                    Password:<br>
-                        <input type="password" name="password" v-model="password">
-            </div>
+
+        <div class="card">
+            <div class="card-header">Login Component</div>
+
+            <div class="card-body">
+
+                <center>
+                    <h5>Login below!</h5>
+
+                    <div class="row">
+                        <div class="col-md-12 my-2">
+                            Email:<br>
+                                <input type="text" name="email" v-model="email">
+                        </div>
+                        <div class="col-md-12 my-2">
+                            Password:<br>
+                                <input type="password" name="password" v-model="password">
+                        </div>
 
 
-                <div class="col-md-12 my-2">
-                    <button class="btn btn-success" @click="FormSubmit()">Submit</button>
-                </div>
+                        <div class="col-md-12 my-2">
+                            <button class="btn btn-success" @click="FormSubmit()">Submit</button>
+                        </div>
+                    </div>
+                </center>
             </div>
-        </center>
+        </div>
     </div>
 </template>
 

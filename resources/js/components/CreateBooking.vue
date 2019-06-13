@@ -1,42 +1,54 @@
 <template>
     <div class="container">
-        <center>
-            <div class="row">
 
-                <div class="col-md my-2">
-                    Pet Name:<br>
-                        <input type="text" name="petname" v-model="petName">
-                </div>
-                <div class="col-md my-2">
-                    Species:<br>
-                        <input type="text" name="petspecies" v-model="petSpecies">
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-lg my-2">
-                    Special Instructions:<br>
-                        <textarea name="specialinstructions" v-model="specialInstructions" style="width:100%" placeholder="Example: 'Allergic to beef' (optional)"></textarea>
+        <div class="card">
+            <div class="card-header">Booking Component</div>
+
+                <div class="card-body">
+
+                    <center>
+                        <h5>Book your pet's holiday below!</h5>
+                    
+
+                    <div class="row">
+
+                        <div class="col-md my-2">
+                            Pet Name:<br>
+                                <input type="text" name="petname" v-model="petName">
+                        </div>
+                        <div class="col-md my-2">
+                            Species:<br>
+                                <input type="text" name="petspecies" v-model="petSpecies">
+                        </div>
                     </div>
-            </div>
-            <div class="row">
 
-                <div class="col-md my-2">
-                    Dropoff Date & Time:<br>
-                        <input type="text" name="indatetime" v-model="inDateTime">
-                </div>
-                <div class="col-md my-2">
-                    Pickup Date & Time:<br>
-                        <input type="text" name="outdatetime" v-model="outDateTime">
-                </div>
+                    <div class="row">
+                        <div class="col-lg my-2">
+                            Special Instructions:<br>
+                                <textarea name="specialinstructions" v-model="specialInstructions" style="width:100%" placeholder="Example: 'Allergic to beef' (optional)"></textarea>
+                            </div>
+                    </div>
 
-            </div>
+                    <div class="row">
 
-            <div class="row">
-                <div class="col-lg my-4">
-                    <button class="btn btn-success" @click="ValidateInput()">Submit</button>
-                </div>
-            </div>
-        </center>
+                        <div class="col-md my-2">
+                            Dropoff Date & Time:<br>
+                                <input type="text" name="indatetime" v-model="inDateTime">
+                        </div>
+                        <div class="col-md my-2">
+                            Pickup Date & Time:<br>
+                                <input type="text" name="outdatetime" v-model="outDateTime">
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-lg my-4">
+                            <button class="btn btn-success" @click="ValidateInput()">Submit</button>
+                        </div>
+                    </div>
+                </center>
+        </div>
+        </div>
     </div>
 </template>
 

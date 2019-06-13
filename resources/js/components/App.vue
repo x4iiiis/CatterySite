@@ -3,29 +3,14 @@
 
         <div class="row">
             <div class="col-md-4">
-                <div class="card">
-                    <div class="card-header">Login Component</div>
 
-                    <div class="card-body">
-
-                        <center><h5>Login below!</h5></center>
-                        <Login-Component />
+                <component is="Login-Component"></component>
                         
-                    </div>
-                </div>
             </div>
 
             
             <div class="col-md-6">
-                <div class="card">
-                    <div class="card-header">Booking Component</div>
-
-                    <div class="card-body">
-
-                        <center><h5>Book your pet's holiday below!</h5></center>
-                        <Create-Booking />
-                    </div>
-                </div>
+                <Create-Booking />
             </div>
         </div>
     </div>
