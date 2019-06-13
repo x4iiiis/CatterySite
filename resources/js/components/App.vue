@@ -1,7 +1,7 @@
 <template>
     <div class="container">
 
-        <div class="row justify-content-center">
+        <div class="row">
             <div class="col-md-4">
                 <div class="card">
                     <div class="card-header">Login Component</div>
@@ -10,9 +10,12 @@
 
                         <center><h5>Login below!</h5></center>
                         <Login-Component />
+                        
                     </div>
                 </div>
             </div>
+
+            
             <div class="col-md-6">
                 <div class="card">
                     <div class="card-header">Booking Component</div>

@@ -15,7 +15,7 @@
             <div class="row">
                 <div class="col-lg my-2">
                     Special Instructions:<br>
-                        <textarea name="specialinstructions" v-model="specialInstructions" style="width:100%"></textarea>
+                        <textarea name="specialinstructions" v-model="specialInstructions" style="width:100%" placeholder="Example: 'Allergic to beef' (optional)"></textarea>
                     </div>
             </div>
             <div class="row">
