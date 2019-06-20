@@ -5,7 +5,7 @@
         <div class="row">
             <div class="col-md-4">
 
-                <component is="Login-Component"></component>
+                <component is="Login-Component" v-if="this.$store.state.userStore.user.id === 0"></component>
                         
             </div>
 
@@ -29,6 +29,7 @@
     export default {
         mounted() {
             console.log('App.vue mounted.')
+            console.log(this.$store.state.userStore.user.id)
         }
     }
 </script>

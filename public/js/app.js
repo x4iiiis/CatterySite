@@ -1793,6 +1793,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ __webpack_exports__["default"] = ({
   mounted: function mounted() {
     console.log('App.vue mounted.');
+    console.log(this.$store.state.userStore.user.id);
   }
 });
 
@@ -37419,7 +37420,11 @@ var render = function() {
       _c(
         "div",
         { staticClass: "col-md-4" },
-        [_c("Login-Component", { tag: "component" })],
+        [
+          this.$store.state.userStore.user.id === 0
+            ? _c("Login-Component", { tag: "component" })
+            : _vm._e()
+        ],
         1
       ),
       _vm._v(" "),
