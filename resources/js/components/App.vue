@@ -1,7 +1,7 @@
 <template>
     <div class="container">
 
-<!--
+
         <div class="row">
             <div class="col-md-4">
 
@@ -14,9 +14,13 @@
                 <Create-Booking />
             </div>
         </div>
--->
+
+        <br></br>
+
         <div class="row">
-            <Registration-Component />
+            <div class="col-md-12">
+                <Registration-Component />
+            </div>
         </div>
     </div>
 </template>
