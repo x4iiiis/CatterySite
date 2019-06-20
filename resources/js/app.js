@@ -26,6 +26,7 @@ Vue.component('example-component', require('./components/ExampleComponent.vue').
 Vue.component('RootApplication', require('./components/App.vue').default);
 Vue.component('CreateBooking', require('./components/CreateBooking.vue').default);
 Vue.component('LoginComponent', require('./components/LoginComponent.vue').default);
+Vue.component('RegistrationComponent', require('./components/RegistrationComponent.vue').default);
 
 
 /**
