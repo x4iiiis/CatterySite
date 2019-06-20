@@ -21,7 +21,7 @@
 
 
                         <div class="col-md-12 my-2">
-                            <button class="btn btn-success" @click="FormSubmit()">Submit</button>
+                            <button class="btn btn-success" @click="FormSubmit()">Login</button>
                         </div>
                     </div>
                 </center>

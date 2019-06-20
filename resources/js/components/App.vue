@@ -2,24 +2,22 @@
     <div class="container">
 
 
-        <div class="row">
-            <div class="col-md-4">
+        <div class="row md-12">
 
-                <component is="Login-Component" v-if="this.$store.state.userStore.user.id === 0"></component>
-                        
+            <div class="col-md-5 my-2" v-if="this.$store.state.userStore.user.id === 0">
+                <component is="Login-Component"></component>        
             </div>
 
-            
-            <div class="col-md-6">
-                <Create-Booking />
+
+            <div class="col-md-7 my-2" v-if="this.$store.state.userStore.user.id === 0">
+                <Registration-Component />
             </div>
         </div>
 
-        <br></br>
-
-        <div class="row">
-            <div class="col-md-12">
-                <Registration-Component />
+        <div class="row md-12">
+            
+            <div class="col-md-12 my-2">
+                <Create-Booking />
             </div>
         </div>
     </div>
@@ -29,7 +27,6 @@
     export default {
         mounted() {
             console.log('App.vue mounted.')
-            console.log(this.$store.state.userStore.user.id)
         }
     }
 </script>
