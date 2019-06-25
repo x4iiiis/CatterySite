@@ -32,11 +32,13 @@
 
                             <div class="col-md my-2">
                                 Dropoff Date & Time:<br>
-                                    <input type="text" name="indatetime" v-model="inDateTime">
+                                    <input type="date" name="indate" v-model="inDate">
+                                    <input type="time" name="intime" v-model="inTime">
                             </div>
                             <div class="col-md my-2">
                                 Pickup Date & Time:<br>
-                                    <input type="text" name="outdatetime" v-model="outDateTime">
+                                    <input type="date" name="outdate" v-model="outDate">
+                                    <input type="time" name="outtime" v-model="outTime">
                             </div>
                         </div>
 
@@ -59,8 +61,10 @@
 
         data() {
             return {
-                inDateTime: '2019/02/06 19:30:13',  
-                outDateTime: '2019/02/08 19:30:13',
+                inDate: '',
+                inTime: '',
+                outDate: '',
+                outTime: '',
                 petName: '',
                 petSpecies: '',
                 specialInstructions: ''
@@ -71,8 +75,8 @@
             FormSubmit() {
                 axios
                   .post('http://localhost:8000/api/booking', {
-                        inDateTime: this.inDateTime,
-                        outDateTime: this.outDateTime,
+                        inDateTime: this.inDate + ' ' +  this.inTime,
+                        outDateTime: this.outDate + ' ' + this.outTime,
                         petName: this.petName,
                         petSpecies: this.petSpecies,
                         specialInstructions: this.specialInstructions,
